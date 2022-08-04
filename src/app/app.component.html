@@ -1,20 +1,13 @@
 <!-- app.component.html -->
 
 <nb-layout>
-    <nb-layout-header>
-        <h1 class="storename"> BUGS - Build Ur Gaming Setup </h1>
-        <span style="flex: 1 auto"></span>
-        <button nbButton status="primary" 
-                style="float:right" 
-                size="medium"
-                font-family="Consolas, sans-serif"> Login </button>
+    <nb-layout-header fixed>
+      <app-header class="header"></app-header>
     </nb-layout-header>
-
-
-
     <nb-layout-footer></nb-layout-footer>
-    <nb-layout-column></nb-layout-column>
-
+    <nb-layout-column style="display: flex; justify-content: center;">
+      <app-layout style="max-width: 50%;"></app-layout>
+    </nb-layout-column>
     <nb-sidebar>
         <nb-menu [items]="items"></nb-menu>
     </nb-sidebar>

@@ -1,0 +1,25 @@
+<nb-card *ngFor="let article of articles" style="box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);">
+  <nb-card-header>
+    <nb-user
+      [name]="article.user.name"
+      [title]="'@'+ article.user.username"
+      size="large"
+      [picture]="article.user.profile_image"
+    >
+    </nb-user>
+  </nb-card-header>
+  <nb-card-body>
+    <div>
+      <div class="title">
+        {{ article.title }}
+      </div>
+      <img [src]="article.social_image" class="image"/>
+      <p class="description">
+        {{ article.description }}
+      </p>
+    </div>
+  </nb-card-body>
+  <nb-card-footer nbButton size="giant" (click)="onReadMore(article.canonical_url)">
+    Read more
+  </nb-card-footer>
+</nb-card>
